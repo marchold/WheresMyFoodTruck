@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Truck:</strong>
+  <%= @open_truck.truck_id %>
+</p>
+
+<p>
+  <strong>Openuntil:</strong>
+  <%= @open_truck.openUntil %>
+</p>
+
+<%= link_to 'Edit', edit_open_truck_path(@open_truck) %> |
+<%= link_to 'Back', open_trucks_path %>

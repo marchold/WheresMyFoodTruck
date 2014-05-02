@@ -1,0 +1,27 @@
+<h1>Listing open_trucks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Truck</th>
+      <th>Openuntil</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @open_trucks.each do |open_truck| %>
+      <tr>
+        <td><%= open_truck.truck_id %></td>
+        <td><%= open_truck.openUntil %></td>
+        <td><%= link_to 'Show', open_truck %></td>
+        <td><%= link_to 'Edit', edit_open_truck_path(open_truck) %></td>
+        <td><%= link_to 'Destroy', open_truck, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Open truck', new_open_truck_path %>

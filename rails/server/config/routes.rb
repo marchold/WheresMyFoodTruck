@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :open_trucks
+
   resources :menu_items
 
   resources :menus

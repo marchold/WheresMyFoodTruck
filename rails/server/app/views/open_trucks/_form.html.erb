@@ -1,0 +1,25 @@
+<%= form_for(@open_truck) do |f| %>
+  <% if @open_truck.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@open_truck.errors.count, "error") %> prohibited this open_truck from being saved:</h2>
+
+      <ul>
+      <% @open_truck.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :truck_id %><br>
+    <%= f.text_field :truck_id %>
+  </div>
+  <div class="field">
+    <%= f.label :openUntil %><br>
+    <%= f.text_field :openUntil %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
