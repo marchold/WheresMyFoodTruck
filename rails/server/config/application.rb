@@ -21,3 +21,14 @@ module Server
     # config.i18n.default_locale = :de
   end
 end
+
+%w{
+ active_record
+ action_controller
+ action_mailer
+}.each do |framework|
+  begin
+    require "#{framework}/railtie"
+  rescue LodeError
+  end
+end
