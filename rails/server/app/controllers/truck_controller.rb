@@ -1,9 +1,12 @@
 class TruckController < ApplicationController
-  def show
-    "hello world"
-  end
+
   def update
-    @x=1
+      render :json => {:haha => 'hoho'} 
+  end
+
+
+  def show
+      render :json => {:dudo => 'woah'}
   end
 
 end
