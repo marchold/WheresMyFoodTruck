@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   scope "api/v1" do
     scope "/truck/location/" do
-       put ":truck_id" => "truck#update"
+       put ":truck_id/:lng/:lat" => "truck#update"
        get "/" => "truck#show"
     end
   end

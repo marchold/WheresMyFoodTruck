@@ -1,7 +1,10 @@
 class TruckController < ApplicationController
 
   def update
-      render :json => {:haha => 'hoho'} 
+      render :json => {:haha => params[:truck_id],
+                       :hoh  => params[:lng],
+                       :hack => params[:lat]
+                      } 
   end
 
 
