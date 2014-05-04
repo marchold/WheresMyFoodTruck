@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502185656) do
+ActiveRecord::Schema.define(version: 20140504195437) do
 
   create_table "menu_items", force: true do |t|
     t.string   "title"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20140502185656) do
     t.datetime "openUntil",  limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "token"
   end
 
   create_table "trucks", force: true do |t|
