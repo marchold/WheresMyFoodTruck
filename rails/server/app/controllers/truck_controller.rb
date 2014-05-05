@@ -7,6 +7,13 @@ class TruckController < ApplicationController
      #Validate that the token against the truck_id on the OpenTrucks table 
      #then write the longitute and latitude in to the table
      #we can return a simple result=>success result 
+     truck = Truck.find_by_id(params[:truck_id])
+     if (truck != nul)
+       
+     else
+
+     end
+
      render :json => {:haha => params[:truck_id],
                        :hoh  => params[:lng],
                        :hack => params[:lat],
