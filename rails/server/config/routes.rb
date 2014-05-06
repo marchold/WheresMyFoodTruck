@@ -14,6 +14,9 @@ Rails.application.routes.draw do
        put ":truck_id/:lng/:lat/:token" => "truck#update"
        get ":truck_id/:user_id" => "truck#show"
     end
+    scope "/nearby/" do
+      get ":lng/:lat/:radius" => "truck#nearby"
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
